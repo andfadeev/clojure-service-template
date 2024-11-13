@@ -1,0 +1,14 @@
+{:web-server {:host #env CST_WEB_SERVER_HOST
+              :port #long #env CST_WEB_SERVER_PORT
+              :cookie-store-key [124 39 -128 97 79 -21 34 16 -81 -24 -81 86 -110 62 23 118]}
+ :database {:user #env CST_DATABASE_USER
+            :port #long #env CST_DATABASE_PORT
+            :password #env CST_DATABASE_PASSWORD
+            :name #env CST_DATABASE_NAME
+            :host #env CST_DATABASE_HOST}
+ :weather-api {:base-url #env CST_WEATHER_API_BASE_URL}
+ :kinde-client {:domain #env CST_KINDE_CLIENT_DOMAIN
+                :client-id #env CST_KINDE_CLIENT_CLIENT_ID
+                :client-secret #env CST_KINDE_CLIENT_CLIENT_SECRET
+                :redirect-uri #env CST_KINDE_CLIENT_REDIRECT_URI
+                :logout-redirect-uri #env CST_KINDE_CLIENT_LOGOUT_REDIRECT_URI}}

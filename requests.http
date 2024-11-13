@@ -1,0 +1,11 @@
+### GET index page request
+
+GET {{host}}/
+
+### GET login page request
+
+GET {{host}}/login
+
+### GET weather forecast (example of 3rd party HTTP call)
+
+GET {{host}}/api/weather/forecast

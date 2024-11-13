@@ -1,0 +1,10 @@
+[tools]
+clj-kondo = "2024.09.27"
+java = "21"
+cljfmt = "0.13.0"
+babashka = "1.4.192"
+lein = "2.10.0"
+
+[plugins]
+cljfmt = "https://github.com/b-social/asdf-cljfmt"
+lein = "https://github.com/miorimmax/asdf-lein"

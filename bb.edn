@@ -1,0 +1,25 @@
+{:tasks
+ {:init (do (defn sh [& args]
+              (binding [*out* *err*]
+                (apply println "+" args))
+              (apply shell args)))
+  app:precommit {:doc "Run all checks and tests"
+                 :depends [app:lint app:fmt:check app:test]}
+  app:lint {:doc "Lint with `clj-kondo`"
+            :task (sh "clj-kondo" "--parallel" "--lint" "src:test:dev")}
+  app:fmt:check {:doc "Check code format with `cljfmt`"
+                 :task (sh "cljfmt" "check")}
+  app:fmt:fix {:doc "Reformat code with `cljfmt`"
+               :task (sh "cljfmt" "fix")}
+  app:run {:doc "Start application"
+           :task (sh "lein run")}
+  app:run:prod {:doc "Start application in production"
+                :task (sh "lein trampoline run")}
+  app:test {:doc "Run all tests"
+            :task (sh "lein kaocha")}
+  app:start {:doc "Start local instance of service."
+             :task (sh "lein run")}
+  app:antq {:doc "Check for outdated dependencies with `antq`"
+            :task (sh "lein antq")}
+  app:deps {:doc "Install all dependencies"
+            :task (sh "lein with-profiles +kaocha deps")}}}
