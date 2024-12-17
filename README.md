@@ -1,17 +1,26 @@
 # clojure-service-template
 
 
-TODO:
-- write docs (readme)
-- add database integration (save weather forecast data)
-- add http endpoint test 
-- add index page (tailwind hiccup)
-- 
 
-FEATURES:
-- write blog post
+### Build TailwindCSS
 
-Developer Experience:
+Template is configured to use `tailwindcss-cli` to build production-ready CSS files. 
+
+Installation and usage example:
+
+```shell
+brew install tailwindcss
+
+tailwindcss init
+
+bb tailwindcss:build
+bb tailwind:watch
+bb tailwind:minify
+```
+
+Build, watch or minify will generate CSS file: `resources/public/css/output.css`.
+
+### Developer Experience:
 
 ```shell
 The following tasks are available:

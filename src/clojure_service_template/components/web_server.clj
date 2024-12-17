@@ -47,7 +47,8 @@
      ["/logout" {:get kinde/logout}]
      ["/api"
       ["/weather/forecast" {:get weather/get-weather-forecast-handler}]]
-     ["/kinde/callback" {:get kinde/kinde-callback}]]
+     ["/kinde/callback" {:get kinde/kinde-callback}]
+     ["/assets/*" (ring/create-resource-handler)]]
     {:data {:coercion coercion-malli/coercion
             :middleware [[wrap-dependencies component]
                          parameters/parameters-middleware
