@@ -2,7 +2,10 @@
  {:init (do (defn sh [& args]
               (binding [*out* *err*]
                 (apply println "+" args))
-              (apply shell args)))
+              (apply shell args))
+            (defn tailwindcss
+              [cmd]
+              (sh (str "tailwindcss -i input.css -o ./resources/public/css/output.css " cmd))))
   app:precommit {:doc "Run all checks and tests"
                  :depends [app:lint app:fmt:check app:test]}
   app:lint {:doc "Lint with `clj-kondo`"
@@ -24,8 +27,8 @@
   app:deps {:doc "Install all dependencies"
             :task (sh "lein with-profiles +kaocha deps")}
   tailwind:watch {:doc "Build TailwindCSS in watch mode"
-                  :task (sh "tailwindcss -i input.css -o ./resources/public/css/output.css --watch")}
+                  :task (tailwindcss "--watch")}
   tailwind:build {:doc "Build TailwindCSS output"
-                  :task (sh "tailwindcss -i input.css -o ./resources/public/css/output.css")}
+                  :task (tailwindcss nil)}
   tailwind:minify {:doc "Build & minify TailwindCSS"
-                   :task (sh "tailwindcss -i input.css -o ./resources/public/css/output.css --minify")}}}
+                   :task (tailwindcss "--minify")}}}
