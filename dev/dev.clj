@@ -9,7 +9,7 @@
          (-> (PostgreSQLContainer. "postgres:16")
              (.withReuse true)))
 
-;(md/start!)
+(md/start!)
 
 (component-repl/set-init
   (fn [_]

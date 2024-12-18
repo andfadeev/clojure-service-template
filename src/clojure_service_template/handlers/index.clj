@@ -7,9 +7,9 @@
   [:head
    [:title "Clojure Service Template"]
    (hiccup-page/include-css
-     "/assets/css/output.css")
+    "/assets/css/output.css")
    (hiccup-page/include-js
-     "https://unpkg.com/htmx.org@1.9.4")
+    "https://unpkg.com/htmx.org@1.9.4")
    body])
 
 (defn index

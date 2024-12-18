@@ -16,15 +16,15 @@
   [config]
   (component/system-map
    :config config
-   ;:kinde-client (kinde-client/new-kinde-client
-   ;               (:kinde-client config))
+   :kinde-client (kinde-client/new-kinde-client
+                  (:kinde-client config))
    :database (database/new-database
               (:database config))
    :web-server (component/using
                 (web-server/new-web-server
                  (:web-server config))
                 [:database
-                 ;:kinde-client
+                 :kinde-client
                  :config])))
 
 (defn read-config
