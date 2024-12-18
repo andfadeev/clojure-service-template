@@ -41,7 +41,7 @@
         (let [dependencies (assoc (:dependencies request) :database tnx)]
           (doseq [weather-forecast-entry weather-forecast-entries]
             (queries/insert-weather-forecast-entry!
-              dependencies
-              weather-forecast-entry))))
+             dependencies
+             weather-forecast-entry))))
 
       (utils/json {:weather-forecast-entries weather-forecast-entries}))))

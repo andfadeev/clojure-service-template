@@ -6,23 +6,24 @@
   [body]
   [:head
    [:title "Clojure Service Template"]
+   (hiccup-page/include-css
+    "/assets/css/output.css")
    (hiccup-page/include-js
-     "https://cdn.tailwindcss.com?plugins=forms"
-     "https://unpkg.com/htmx.org@1.9.4")
+    "https://unpkg.com/htmx.org@1.9.4")
    body])
 
 (defn index
   [request]
   (let [user (utils/request->user request)
-        body [:body
-              [:div.max-w-screen-xl.mx-auto.px-5
+        body [:body.bg-stone-950.text-white
+              [:div.container.mx-auto.px-5
                (if user
                  [:div
-                  [:h1 "Welcome"]
+                  [:h1.text-lg "Welcome"]
                   [:div (str user)]
                   [:div [:a {:href "/logout"} "Logout"]]]
                  [:div
-                  [:h1 "Login or Signup"]
+                  [:h1.text-xl.font-bold.text-red-500 "Login or Signup"]
                   [:div [:a {:href "/login"} "Login"]]
                   [:div [:a {:href "/signup"} "Signup"]]])]]]
     (->> body
