@@ -9,12 +9,12 @@
             [reitit.ring.coercion :as ring-coercion]
             [ring.middleware.session :as session]
             [ring.middleware.session.cookie :as cookie-store]
+            [com.stuartsierra.component :as component]
             [clojure-service-template.handlers
              [kinde :as kinde]
              [index :as index]
              [weather :as weather]])
-  (:import (com.stuartsierra.component Lifecycle)
-           (org.eclipse.jetty.server Server)))
+  (:import (org.eclipse.jetty.server Server)))
 
 (defn wrap-dependencies
   [handler context]
@@ -68,7 +68,7 @@
 
 (defrecord WebServerComponent
            [component-config]
-  Lifecycle
+  component/Lifecycle
   (start [component]
     (log/info "Starting WebServerComponent" component-config)
     (let [web-server (jetty/run-jetty

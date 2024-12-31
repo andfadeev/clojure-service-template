@@ -6,7 +6,7 @@
   (:import (org.testcontainers.containers PostgreSQLContainer)))
 
 (defonce postgresql-test-container
-         (-> (PostgreSQLContainer. "postgres:16")
+         (-> (PostgreSQLContainer. "postgres:16-alpine")
              (.withReuse true)))
 
 (md/start!)

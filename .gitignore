@@ -12,5 +12,6 @@ pom.xml.asc
 .hgignore
 .hg/
 .idea
-.clj-kondo/.cache
+.clj-kondo
 *.iml
+resources/public/css/output.css

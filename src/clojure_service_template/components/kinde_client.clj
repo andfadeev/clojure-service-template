@@ -1,13 +1,13 @@
 (ns clojure-service-template.components.kinde-client
   (:require [clojure-service-template.types :as t]
+            [com.stuartsierra.component :as component]
             [clojure.tools.logging :as log])
   (:import (com.kinde KindeClientBuilder)
-           (com.kinde.authorization AuthorizationType)
-           (com.stuartsierra.component Lifecycle)))
+           (com.kinde.authorization AuthorizationType)))
 
 (defrecord KindeClientComponent
            [component-config]
-  Lifecycle
+  component/Lifecycle
   (start [component]
     (log/info "Starting KindeClientComponent")
     (let [{:keys [domain
