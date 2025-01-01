@@ -1,8 +1,5 @@
 {:linters {:unresolved-symbol {:exclude [(malli.core/=>)]},
-           :type-mismatch {:namespaces {clojure-service-template.queries {insert-weather-forecast-entry! {:arities {2 {:args [:any
-                                                                                                                              :any],
-                                                                                                                       :ret :any}}}},
-                                        clojure-service-template.core {build-system {:arities {1 {:args [{:op :keys,
+           :type-mismatch {:namespaces {clojure-service-template.core {build-system {:arities {1 {:args [{:op :keys,
                                                                                                           :req {:web-server {:op :keys,
                                                                                                                              :req {:host :string,
                                                                                                                                    :port :int,
@@ -20,6 +17,9 @@
                                                                                                                 :weather-api {:op :keys,
                                                                                                                               :req {:base-url :string}}}}],
                                                                                                   :ret :any}}}},
+                                        clojure-service-template.queries {insert-weather-forecast-entry! {:arities {2 {:args [:any
+                                                                                                                              :any],
+                                                                                                                       :ret :any}}}},
                                         clojure-service-template.components.web-server {new-web-server {:arities {1 {:args [{:op :keys,
                                                                                                                              :req {:host :string,
                                                                                                                                    :port :int,
