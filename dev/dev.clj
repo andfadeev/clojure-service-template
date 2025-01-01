@@ -25,6 +25,7 @@
        :weather-api {:base-url "https://api.open-meteo.com"}
        :kinde-client {:domain "https://andreyfadeev-local.uk.kinde.com"
                       :client-id "4d1c2c7eb9954ddf94c63191cb7ffe5e"
-                      :client-secret (System/getenv "CST_KINDE_CLIENT_CLIENT_SECRET")
+                      :client-secret (or (System/getenv "CST_KINDE_CLIENT_CLIENT_SECRET")
+                                         "kinde-client-secret")
                       :redirect-uri "http://localhost:8080/kinde/callback"
                       :logout-redirect-uri "http://localhost:8080/"}})))
