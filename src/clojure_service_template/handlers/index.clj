@@ -23,7 +23,7 @@
                   [:div (str user)]
                   [:div [:a {:href "/logout"} "Logout"]]]
                  [:div
-                  [:h1.text-xl.font-bold.text-red-500 "Login or Signup"]
+                  [:h1.text-xl.font-bold.text-green-500 "Login or Signup"]
                   [:div [:a {:href "/login"} "Login"]]
                   [:div [:a {:href "/signup"} "Signup"]]])]]]
     (->> body

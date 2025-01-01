@@ -6,6 +6,8 @@
             (defn tailwindcss
               [cmd]
               (sh (str "tailwindcss -i input.css -o ./resources/public/css/output.css " cmd))))
+  docker:build {:doc "Build Docker image"
+                :task (sh "docker" "build" "--platform" "linux/amd64" "-t" "clojure-service-template:local" ".")}
   app:precommit {:doc "Run all checks and tests"
                  :depends [app:lint app:fmt:check app:test]}
   app:lint {:doc "Lint with `clj-kondo`"

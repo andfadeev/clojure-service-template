@@ -33,10 +33,11 @@
   :target-path "target/%s"
   :plugins [[com.github.liquidz/antq "2.10.1241"]]
   :antq {}
+  :repl-options {:init-ns dev}
   :profiles {:dev {:dependencies [[com.stuartsierra/component.repl "1.0.0"]
                                   [nrepl/nrepl "1.3.0"]
-                                  [org.testcontainers/testcontainers "1.18.0"]
-                                  [org.testcontainers/postgresql "1.18.0"]]
+                                  [org.testcontainers/testcontainers "1.20.4"]
+                                  [org.testcontainers/postgresql "1.20.4"]]
                    :source-paths ["dev"]}
              :kaocha {:dependencies [[lambdaisland/kaocha "1.91.1392"]]}
              :uberjar {:aot :all
