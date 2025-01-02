@@ -13,7 +13,7 @@ RUN chmod +x tailwindcss-linux-x64
 RUN mv tailwindcss-linux-x64 /bin/tailwindcss
 RUN alias tailwindcss=/bin/tailwindcss
 
-CMD ["tailwindcss",  "-i", "./src/input.css", "-o", "./resources/public/css/output.css", "--minify"]
+RUN /bin/tailwindcss -i ./input.css -o ./resources/public/css/output.css --minify
 
 FROM clojure:temurin-21-lein-alpine AS clj-builder
 RUN mkdir -p /usr/src/app
