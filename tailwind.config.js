@@ -6,6 +6,7 @@ module.exports = {
   //   "text-lg",
   //   "font-bold",
   // ],
+  darkMode: 'selector',
   content: [
     "./src/**/*.{clj,cljs,cljc}"
   ],
