@@ -18,13 +18,17 @@
 (defn nav
   []
   [:nav {:class "flex justify-between container py-5 items-center"}
-   [:a {:href "/"
-        :class "text-xl font-bold"} "Clojure Service Template"]
+   [:a {:class "text-xl font-bold"} "Clojure Service Template"]
 
-   [:button {"@click" "$store.theme.toggleTheme()"
-             :class "text-gray-500 bg-slate-50 rounded p-1 hover:text-sky-900"}
-    (svg/sun {:x-show "$store.theme.dark"})
-    (svg/moon {:x-show "!$store.theme.dark"})]])
+   [:button {"@click" "$store.theme.lightTheme()"
+             :class "text-white bg-gray-700 rounded p-1 hover:text-yellow-500"
+             :x-show "$store.theme.dark"}
+    (svg/sun)]
+
+   [:button {"@click" "$store.theme.darkTheme()"
+             :class "text-gray-500 bg-slate-50 rounded p-1 hover:text-sky-900"
+             :x-show "!$store.theme.dark"}
+    (svg/moon)]])
 
 (defn index
   [request]
