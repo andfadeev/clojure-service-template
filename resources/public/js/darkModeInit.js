@@ -1,11 +1,14 @@
-document.documentElement.classList.toggle(
-    'dark',
-    localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-)
+function isDark() {
+    return localStorage.theme === 'dark'
+        || (!('theme' in localStorage)
+            && window.matchMedia('(prefers-color-scheme: dark)').matches)
+}
+
+document.documentElement.classList.toggle('dark', isDark())
 
 document.addEventListener('alpine:init', () => {
     Alpine.store('theme', {
-        dark: localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches),
+        dark: isDark(),
         darkTheme() {
             this.dark = true;
             localStorage.theme = 'dark';

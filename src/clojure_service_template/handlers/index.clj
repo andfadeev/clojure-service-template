@@ -21,12 +21,12 @@
    [:a {:class "text-xl font-bold"} "Clojure Service Template"]
 
    [:button {"@click" "$store.theme.lightTheme()"
-             :class "text-white bg-gray-700 rounded p-1 hover:text-yellow-500"
+             :class "text-white rounded p-1 hover:text-yellow-500"
              :x-show "$store.theme.dark"}
     (svg/sun)]
 
    [:button {"@click" "$store.theme.darkTheme()"
-             :class "text-gray-500 bg-slate-50 rounded p-1 hover:text-sky-900"
+             :class "text-gray-400 rounded p-1 hover:text-sky-900"
              :x-show "!$store.theme.dark"}
     (svg/moon)]])
 
