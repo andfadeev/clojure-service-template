@@ -1,5 +1,3 @@
-console.log("HI!!!")
-
 function isDark() {
     return localStorage.theme === 'dark'
         || (!('theme' in localStorage)
