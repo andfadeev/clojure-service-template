@@ -25,11 +25,9 @@
              :crossorigin "anonymous"}]
    body])
 
-(defn nav
+(defn theme-toggle
   []
-  [:nav {:class "flex justify-between container py-5 items-center"}
-   [:a {:class "text-xl font-bold"} "Clojure Service Template"]
-
+  [:div
    [:button {"@click" "$store.theme.lightTheme()"
              :class "text-white rounded p-1 hover:text-yellow-500"
              :x-show "$store.theme.dark"}
@@ -39,6 +37,12 @@
              :class "text-gray-400 rounded p-1 hover:text-sky-900"
              :x-show "!$store.theme.dark"}
     (svg/moon)]])
+
+(defn nav
+  []
+  [:nav {:class "flex justify-between container py-5 items-center"}
+   [:a {:class "text-xl font-bold"} "Clojure Service Template"]
+   (theme-toggle)])
 
 (defn index
   [request]
