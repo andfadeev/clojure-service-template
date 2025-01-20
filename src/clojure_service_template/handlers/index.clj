@@ -5,7 +5,7 @@
 
 (defn service-version
   []
-  (or (System/getProperty "SERVICE_VERSION")
+  (or (System/getenv "SERVICE_VERSION")
       (random-uuid)))
 
 (defn with-service-version
