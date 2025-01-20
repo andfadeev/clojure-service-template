@@ -3,16 +3,26 @@
             [hiccup.page :as hiccup-page]
             [clojure-service-template.svg :as svg]))
 
+(defn service-version
+  []
+  (or (System/getProperty "SERVICE_VERSION")
+      (random-uuid)))
+
+(defn with-service-version
+  [path]
+  (str path "?v=" (service-version)))
+
 (defn layout
   [body]
   [:head
    [:title "Clojure Service Template"]
    (hiccup-page/include-css
-    (str "/assets/css/output.css?v=" (random-uuid)))
-   [:script {:src (str "/assets/js/darkModeInit.js?v=" (random-uuid))}]
-   (hiccup-page/include-js
-    "https://unpkg.com/htmx.org@1.9.4"
-    "https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js")
+    (with-service-version "/assets/css/output.css"))
+   [:script {:src (with-service-version "/assets/js/theme.js")}]
+   [:script {:src "https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"}]
+   [:script {:src "https://unpkg.com/htmx.org@2.0.4"
+             :integrity "sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+"
+             :crossorigin "anonymous"}]
    body])
 
 (defn nav
