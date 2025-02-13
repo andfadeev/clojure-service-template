@@ -29,3 +29,4 @@
                                          "kinde-client-secret")
                       :redirect-uri "http://localhost:8080/kinde/callback"
                       :logout-redirect-uri "http://localhost:8080/"}})))
+

@@ -60,8 +60,7 @@
    (ring/routes
     (ring/redirect-trailing-slash-handler)
     (ring/create-default-handler
-     {;:not-found error-pages/not-found-page
-      :method-not-allowed (constantly {:status 405
+     {:method-not-allowed (constantly {:status 405
                                        :body ""})
       :not-acceptable (constantly {:status 406
                                    :body ""})}))))
