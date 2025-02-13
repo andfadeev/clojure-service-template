@@ -42,3 +42,6 @@
              :kaocha {:dependencies [[lambdaisland/kaocha "1.91.1392"]]}
              :uberjar {:aot :all
                        :jvm-opts ["-Dclojure.compiler.direct-linking=true"]}})
+
+
+

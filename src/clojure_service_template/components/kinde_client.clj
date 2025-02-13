@@ -7,6 +7,8 @@
 
 (defrecord KindeClientComponent
            [component-config]
+
+
   component/Lifecycle
   (start [component]
     (log/info "Starting KindeClientComponent")

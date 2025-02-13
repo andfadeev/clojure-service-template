@@ -29,8 +29,6 @@ safelist: [
 ]
 ```
 
-
-
 ### Developer Experience:
 Babashka is used as the tasks runner:
 ```shell

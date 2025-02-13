@@ -56,6 +56,8 @@
                          ring-coercion/coerce-request-middleware
                          ring-coercion/coerce-response-middleware
                          [session/wrap-session
+
+
                           (component->cookie-store component)]]}})
    (ring/routes
     (ring/redirect-trailing-slash-handler)
