@@ -21,8 +21,8 @@
                  [com.layerware/hugsql "0.5.3"]
                  [com.github.seancorfield/honeysql "2.6.1270"]
                  [org.postgresql/postgresql "42.7.5"]
-                 [org.flywaydb/flyway-core "11.3.2"]
-                 [org.flywaydb/flyway-database-postgresql "11.3.2"]
+                 [org.flywaydb/flyway-core "11.3.3"]
+                 [org.flywaydb/flyway-database-postgresql "11.3.3"]
 
                  [com.zaxxer/HikariCP "6.2.1"]
 
@@ -31,13 +31,13 @@
                  [org.slf4j/slf4j-simple "2.1.0-alpha1"]]
   :main ^:skip-aot clojure-service-template.core
   :target-path "target/%s"
-  :plugins [[com.github.liquidz/antq "2.11.1264"]]
+  :plugins [[com.github.liquidz/antq "2.11.1269"]]
   :antq {}
   :repl-options {:init-ns dev}
   :profiles {:dev {:dependencies [[com.stuartsierra/component.repl "1.0.0"]
                                   [nrepl/nrepl "1.3.1"]
-                                  [org.testcontainers/testcontainers "1.20.4"]
-                                  [org.testcontainers/postgresql "1.20.4"]]
+                                  [org.testcontainers/testcontainers "1.20.5"]
+                                  [org.testcontainers/postgresql "1.20.5"]]
                    :source-paths ["dev"]}
              :kaocha {:dependencies [[lambdaisland/kaocha "1.91.1392"]]}
              :uberjar {:aot :all
