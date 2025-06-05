@@ -5,6 +5,6 @@ cljfmt = "0.13.0"
 babashka = "1.4.192"
 lein = "2.10.0"
 
-[plugins]
+[alias]
 cljfmt = "https://github.com/b-social/asdf-cljfmt"
 lein = "https://github.com/miorimmax/asdf-lein"
