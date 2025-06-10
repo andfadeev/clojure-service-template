@@ -9,20 +9,20 @@
                  [ring/ring-jetty-adapter "1.14.1"]
                  [com.stuartsierra/component "1.1.0"]
                  [aero "1.1.6"]
-                 [metosin/malli "0.18.0"]
+                 [metosin/malli "0.19.1"]
                  [hiccup/hiccup "2.0.0-RC5"]
                  [com.kinde/kinde-core "2.0.1"]
 
                  [camel-snake-kebab "0.4.3"]
-                 [org.babashka/http-client "0.4.22"]
+                 [org.babashka/http-client "0.4.23"]
                  [com.cnuernber/charred "1.037"]
 
                  [com.github.seancorfield/next.jdbc "1.3.1002"]
                  [com.layerware/hugsql "0.5.3"]
                  [com.github.seancorfield/honeysql "2.7.1310"]
                  [org.postgresql/postgresql "42.7.6"]
-                 [org.flywaydb/flyway-core "11.9.0"]
-                 [org.flywaydb/flyway-database-postgresql "11.9.0"]
+                 [org.flywaydb/flyway-core "11.9.1"]
+                 [org.flywaydb/flyway-database-postgresql "11.9.1"]
 
                  [com.zaxxer/HikariCP "6.3.0"]
 
