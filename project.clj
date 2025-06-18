@@ -5,8 +5,8 @@
             :url "https://www.eclipse.org/legal/epl-2.0/"}
   :dependencies [[org.clojure/clojure "1.12.1"]
                  [metosin/reitit "0.9.1"]
-                 [ring/ring-core "1.14.1"]
-                 [ring/ring-jetty-adapter "1.14.1"]
+                 [ring/ring-core "1.14.2"]
+                 [ring/ring-jetty-adapter "1.14.2"]
                  [com.stuartsierra/component "1.1.0"]
                  [aero "1.1.6"]
                  [metosin/malli "0.19.1"]
@@ -17,10 +17,10 @@
                  [org.babashka/http-client "0.4.23"]
                  [com.cnuernber/charred "1.037"]
 
-                 [com.github.seancorfield/next.jdbc "1.3.1002"]
+                 [com.github.seancorfield/next.jdbc "1.3.1048"]
                  [com.layerware/hugsql "0.5.3"]
                  [com.github.seancorfield/honeysql "2.7.1310"]
-                 [org.postgresql/postgresql "42.7.6"]
+                 [org.postgresql/postgresql "42.7.7"]
                  [org.flywaydb/flyway-core "11.9.1"]
                  [org.flywaydb/flyway-database-postgresql "11.9.1"]
 
